@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) throws JAXBException {
         JAXBContext jc = JAXBContext.newInstance(Student.class);
         Unmarshaller unmarshaller = jc.createUnmarshaller();
-        Student students = (Student) unmarshaller.unmarshal(new File("C:\\Users\\fined\\IdeaProjects\\JSONandXML\\src\\main\\resources\\test.xml"));
+        Student students = (Student) unmarshaller.unmarshal(new File("src\\main\\resources\\test.xml"));
         System.out.println(students.getId() + " "+ students.getName() + " "+ students.getSurname());
 
 
@@ -21,6 +21,6 @@ public class Main {
         student.setSurname("Smit");
         student.setId("1");
         Marshaller marshaller = jc.createMarshaller();
-        marshaller.marshal(student, new File("C:\\Users\\fined\\IdeaProjects\\JSONandXML\\src\\main\\resources\\test.xml"));
+        marshaller.marshal(student, new File("src\\main\\resources\\test.xml"));
     }
 }
