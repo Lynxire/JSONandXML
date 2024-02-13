@@ -12,13 +12,13 @@ public class Main {
         JAXBContext jc = JAXBContext.newInstance(Shop.class);
         Unmarshaller unmarshaller = jc.createUnmarshaller();
         Shop students = (Shop) unmarshaller.unmarshal(new File("src\\main\\resources\\test.xml"));
-        System.out.println(students.getId() + " "+ students.getName() + " "+ students.getSurname());
+        System.out.println(students.getId() + " "+ students.getName() + " "+ students.getProduct());
 
 
 
         Shop shop = new Shop();
         shop.setName("Lila");
-        shop.setSurname("Smit");
+        shop.setProduct("Smit");
         shop.setId("1");
         Marshaller marshaller = jc.createMarshaller();
         marshaller.marshal(shop, new File("src\\main\\resources\\test.xml"));

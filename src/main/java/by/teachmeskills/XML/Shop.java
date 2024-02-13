@@ -19,17 +19,9 @@ public class Shop {
     public String getName() {
         return name;
     }
-
-    public void setName(String name) {
-        this.name = name;
-    }
     @XmlAttribute(name = "product")
-    public String getSurname() {
+    public String getProduct() {
         return product;
-    }
-
-    public void setSurname(String product) {
-        this.product = product;
     }
 
     @XmlAttribute(name = "id")
@@ -37,7 +29,4 @@ public class Shop {
         return id;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
 }
