@@ -9,18 +9,18 @@ import java.io.File;
 
 public class Main {
     public static void main(String[] args) throws JAXBException {
-        JAXBContext jc = JAXBContext.newInstance(Student.class);
+        JAXBContext jc = JAXBContext.newInstance(Shop.class);
         Unmarshaller unmarshaller = jc.createUnmarshaller();
-        Student students = (Student) unmarshaller.unmarshal(new File("src\\main\\resources\\test.xml"));
+        Shop students = (Shop) unmarshaller.unmarshal(new File("src\\main\\resources\\test.xml"));
         System.out.println(students.getId() + " "+ students.getName() + " "+ students.getSurname());
 
 
 
-        Student student = new Student();
-        student.setName("Lila");
-        student.setSurname("Smit");
-        student.setId("1");
+        Shop shop = new Shop();
+        shop.setName("Lila");
+        shop.setSurname("Smit");
+        shop.setId("1");
         Marshaller marshaller = jc.createMarshaller();
-        marshaller.marshal(student, new File("src\\main\\resources\\test.xml"));
+        marshaller.marshal(shop, new File("src\\main\\resources\\test.xml"));
     }
 }

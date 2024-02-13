@@ -1,11 +1,9 @@
 package by.teachmeskills.JSON;
 
-import by.teachmeskills.XML.Student;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.File;
 import java.io.IOException;
-import java.lang.runtime.ObjectMethods;
 
 public class Main {
     public static void main(String[] args) throws IOException {
