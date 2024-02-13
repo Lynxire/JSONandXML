@@ -1,9 +1,14 @@
 package by.teachmeskills.XML;
 
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 
+@Getter
+@Setter
 @XmlRootElement(name = "shop")
 public class Shop {
     private String name;
